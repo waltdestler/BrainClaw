@@ -4,6 +4,7 @@ using System.Collections;
 public class BrainBehavior : MonoBehaviour {
 
 	public CharacterBody body;
+	public Color brainColor = Color.magenta;
 
 	// Use this for initialization
 	void Start () {
