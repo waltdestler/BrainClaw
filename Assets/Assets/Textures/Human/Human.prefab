@@ -185,7 +185,7 @@ GameObject:
   - 212: {fileID: 21232206}
   - 114: {fileID: 11410886}
   m_Layer: 0
-  m_Name: Brain Sprite
+  m_Name: Brain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

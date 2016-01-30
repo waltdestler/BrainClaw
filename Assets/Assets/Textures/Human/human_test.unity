@@ -197,6 +197,30 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 410840, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 453852, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461462, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: brainColor.r
+      value: 0.8392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461462, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: brainColor.g
+      value: 0.73333335
+      objectReference: {fileID: 0}
+    - target: {fileID: 11461462, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: brainColor.b
+      value: 0.52156866
+      objectReference: {fileID: 0}
+    - target: {fileID: 191722, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: m_Name
+      value: Brain
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
   m_IsPrefabParent: 0
