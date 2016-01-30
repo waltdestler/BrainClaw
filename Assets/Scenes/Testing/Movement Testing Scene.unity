@@ -314,7 +314,6 @@ GameObject:
   - 4: {fileID: 961189743}
   - 212: {fileID: 961189742}
   - 114: {fileID: 961189741}
-  - 114: {fileID: 961189744}
   - 61: {fileID: 961189745}
   m_Layer: 0
   m_Name: Body
@@ -338,7 +337,7 @@ MonoBehaviour:
   jumpHeight: 1
   jumpTime: 1
   fallSpeed: 1
-  isGrounded: 1
+  brainBehavior: {fileID: 2112427162}
   groundCheckerScript: {fileID: 367616057}
 --- !u!212 &961189742
 SpriteRenderer:
@@ -384,23 +383,6 @@ Transform:
   - {fileID: 2112427161}
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &961189744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 961189740}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27c9409e5bb5e5749b9d1abc2dcfdbfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  jumpHeight: 1
-  jumpTime: 1
-  fallSpeed: 1
-  isGrounded: 1
-  groundCheckerScript: {fileID: 0}
 --- !u!61 &961189745
 BoxCollider2D:
   m_ObjectHideFlags: 0

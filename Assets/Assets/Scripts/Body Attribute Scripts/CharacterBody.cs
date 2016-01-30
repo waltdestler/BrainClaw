@@ -7,10 +7,11 @@ public class CharacterBody : MonoBehaviour {
 	public float jumpHeight = 1f;
 	public float jumpTime = 1f;
 	public float fallSpeed = 1f;
-	public bool isGrounded = true;
 	public enum Direction {LEFT, RIGHT}
 
 	private bool isJumping = false;
+
+	public BrainBehavior brainBehavior;
 
 	public GroundCheckerScript groundCheckerScript;
 
@@ -23,6 +24,10 @@ public class CharacterBody : MonoBehaviour {
 
 	void Update()
 	{
+		if (brainBehavior != null) 
+		{
+			brainBehavior.ManualUpdate ();
+		}
 
 		if (!groundCheckerScript.isGrounded) 
 		{
@@ -64,6 +69,10 @@ public class CharacterBody : MonoBehaviour {
 
 	IEnumerator JumpingCoroutine()
 	{
+		if (isJumping || !groundCheckerScript.isGrounded) {
+			yield break;
+		}
+
 		isJumping = true;
 
 		float currentHeight = transform.position.y;

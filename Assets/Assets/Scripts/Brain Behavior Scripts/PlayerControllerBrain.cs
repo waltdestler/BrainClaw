@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerControllerBrain : BrainBehavior {
 
-	public CharacterBody body;
+
 
 	// Use this for initialization
 	void Start () {
@@ -11,7 +11,7 @@ public class PlayerControllerBrain : BrainBehavior {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	override public void ManualUpdate () {
 		
 		if (Input.GetKey (KeyCode.LeftArrow)) {
 			body.MoveLeft ();
@@ -24,4 +24,6 @@ public class PlayerControllerBrain : BrainBehavior {
 		}
 
 	}
+
+
 }
