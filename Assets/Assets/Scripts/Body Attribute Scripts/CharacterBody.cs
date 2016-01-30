@@ -15,6 +15,8 @@ public class CharacterBody : MonoBehaviour {
 
 	public GroundCheckerScript groundCheckerScript;
 
+	public Animator animator;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -24,6 +26,8 @@ public class CharacterBody : MonoBehaviour {
 
 	void Update()
 	{
+		animator.SetFloat("walk_speed", 0);
+
 		if (brainBehavior != null) 
 		{
 			brainBehavior.ManualUpdate ();
@@ -45,6 +49,9 @@ public class CharacterBody : MonoBehaviour {
 		{
 			//GetComponent<Rigidbody2D> ().MovePosition (transform.position -moveSpeed * Time.deltaTime * transform.right );
 			transform.Translate (-moveSpeed * Time.deltaTime * transform.right);
+
+			animator.SetFloat("walk_speed", moveSpeed);
+			animator.transform.localScale = new Vector3(1, 1, 1);
 		}
 	}
 
@@ -53,6 +60,9 @@ public class CharacterBody : MonoBehaviour {
 		if (groundCheckerScript.isGrounded) 
 		{
 			transform.Translate (moveSpeed * Time.deltaTime * transform.right);
+
+			animator.SetFloat("walk_speed", moveSpeed);
+			animator.transform.localScale = new Vector3(-1, 1, 1);
 		}
 	}
 
