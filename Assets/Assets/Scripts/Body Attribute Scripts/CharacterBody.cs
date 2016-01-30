@@ -13,7 +13,7 @@ public class CharacterBody : MonoBehaviour {
 
 	public BrainBehavior brainBehavior;
 
-	public GroundCheckerScript groundCheckerScript;
+	public CollisionManager collisionManager;
 
 	public Animator animator;
 
@@ -26,14 +26,15 @@ public class CharacterBody : MonoBehaviour {
 
 	void Update()
 	{
-		animator.SetFloat("walk_speed", 0);
+		if(animator)
+			animator.SetFloat("walk_speed", 0);
 
 		if (brainBehavior != null) 
 		{
 			brainBehavior.ManualUpdate ();
 		}
 
-		if (!groundCheckerScript.isGrounded) 
+		if (!collisionManager.BotIsColliding()) 
 		{
 			// Check if we are jumping
 			if (!isJumping) 
@@ -45,24 +46,32 @@ public class CharacterBody : MonoBehaviour {
 
 	public virtual void MoveLeft()
 	{
-		if (groundCheckerScript.isGrounded) 
+		if (collisionManager.BotIsColliding() &&
+			!collisionManager.LeftIsColliding()) 
 		{
 			//GetComponent<Rigidbody2D> ().MovePosition (transform.position -moveSpeed * Time.deltaTime * transform.right );
 			transform.Translate (-moveSpeed * Time.deltaTime * transform.right);
 
-			animator.SetFloat("walk_speed", moveSpeed);
-			animator.transform.localScale = new Vector3(1, 1, 1);
+			if (animator) 
+			{
+				animator.SetFloat ("walk_speed", moveSpeed);
+				animator.transform.localScale = new Vector3 (1, 1, 1);
+			}
 		}
 	}
 
 	public virtual void MoveRight()
 	{
-		if (groundCheckerScript.isGrounded) 
+		if (collisionManager.BotIsColliding() &&
+			!collisionManager.RightIsColliding()) 
 		{
 			transform.Translate (moveSpeed * Time.deltaTime * transform.right);
 
-			animator.SetFloat("walk_speed", moveSpeed);
-			animator.transform.localScale = new Vector3(-1, 1, 1);
+			if (animator) 
+			{
+				animator.SetFloat ("walk_speed", moveSpeed);
+				animator.transform.localScale = new Vector3 (-1, 1, 1);
+			}
 		}
 	}
 
@@ -79,7 +88,7 @@ public class CharacterBody : MonoBehaviour {
 
 	IEnumerator JumpingCoroutine()
 	{
-		if (isJumping || !groundCheckerScript.isGrounded) {
+		if (isJumping || !collisionManager.BotIsColliding()) {
 			yield break;
 		}
 
@@ -89,7 +98,11 @@ public class CharacterBody : MonoBehaviour {
 
 		while( transform.position.y < currentHeight+jumpHeight)
 		{
-			transform.Translate (jumpHeight/jumpTime * Time.deltaTime * transform.up);
+
+			if (collisionManager.TopIsColliding ())
+				break;	
+
+			transform.Translate (jumpHeight / jumpTime * Time.deltaTime * transform.up);
 			yield return null;
 		}
 

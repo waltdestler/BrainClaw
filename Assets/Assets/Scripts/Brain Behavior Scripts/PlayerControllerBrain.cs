@@ -10,7 +10,7 @@ public class PlayerControllerBrain : BrainBehavior {
 	
 	}
 	
-	// Update is called once per frame
+	// ManualUpdate is called once per frame by CharacterBody
 	override public void ManualUpdate () {
 		
 		if (Input.GetKey (KeyCode.LeftArrow)) {
