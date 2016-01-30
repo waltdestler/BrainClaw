@@ -7,7 +7,8 @@ public class CharacterBody : MonoBehaviour {
 	public float jumpHeight = 1f;
 	public float jumpTime = 1f;
 	public float fallSpeed = 1f;
-	public enum Direction {LEFT, RIGHT}
+	public enum Direction {LEFT, RIGHT, UP, DOWN}
+	Direction sideFacing = Direction.LEFT;
 
 	private bool isJumping = false;
 
@@ -49,6 +50,8 @@ public class CharacterBody : MonoBehaviour {
 		if (collisionManager.BotIsColliding() &&
 			!collisionManager.LeftIsColliding()) 
 		{
+			sideFacing = Direction.LEFT;
+
 			//GetComponent<Rigidbody2D> ().MovePosition (transform.position -moveSpeed * Time.deltaTime * transform.right );
 			transform.Translate (-moveSpeed * Time.deltaTime * transform.right);
 
@@ -65,6 +68,8 @@ public class CharacterBody : MonoBehaviour {
 		if (collisionManager.BotIsColliding() &&
 			!collisionManager.RightIsColliding()) 
 		{
+			sideFacing = Direction.RIGHT;
+
 			transform.Translate (moveSpeed * Time.deltaTime * transform.right);
 
 			if (animator) 
@@ -110,7 +115,9 @@ public class CharacterBody : MonoBehaviour {
 		isJumping = false;
 			
 	}
-
-
-
+		
+	public bool CheckDirectionCollision(Direction d)
+	{
+		return collisionManager.directionColliding (d);
+	}
 }
