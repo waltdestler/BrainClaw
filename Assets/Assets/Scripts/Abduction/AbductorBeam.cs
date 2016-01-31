@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public class AbductorBeam : MonoBehaviour {
 	public ScoreKeeper scoreboardConnected;
+	public float nextLevelDelay = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -22,12 +23,18 @@ public class AbductorBeam : MonoBehaviour {
 			// Advance level if cleared.
 			if (scoreboardConnected.numLeftToAbduct == 0) {
 				Debug.Log("Quota Fulfilled!!");
-				if (Application.loadedLevel != Application.levelCount - 1) {
-					Application.LoadLevel (Application.loadedLevel + 1);
-				}
+				StartCoroutine(GotoNextLevel());
 			}
 		}
     }
+
+	IEnumerator GotoNextLevel()
+	{
+		yield return new WaitForSeconds(nextLevelDelay);
+		if (Application.loadedLevel != Application.levelCount - 1) {
+			Application.LoadLevel (Application.loadedLevel + 1);
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
