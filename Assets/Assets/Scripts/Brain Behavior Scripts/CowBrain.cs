@@ -11,7 +11,8 @@ public class CowBrain : BrainBehavior {
 
 	public float raycastDistance = 10f;
 
-	float stopDistance = 1.5f;
+	float stopDistance = 1f;
+	float eatDistance = 2f;
 
 	// ManualUpdate is called once per frame by CharacterBody
 	override public void ManualUpdate () {
@@ -32,7 +33,8 @@ public class CowBrain : BrainBehavior {
 			else
 				body.MoveLeft ();
 		} 
-		else {
+		//else {
+		if (Mathf.Abs(closestGrass.position.x - body.transform.position.x) < eatDistance) {
 			//If we are inside the stop distance, began eating said grass
 
 			HayBodyScript hayScript = closestGrass.GetComponent<HayBodyScript> ();

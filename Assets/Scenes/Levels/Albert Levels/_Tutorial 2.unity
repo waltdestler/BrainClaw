@@ -8478,6 +8478,82 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &410234696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 112046, guid: 4911c79527e48854e95bbb12ca421335, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 410234697}
+  - 222: {fileID: 410234699}
+  - 114: {fileID: 410234698}
+  m_Layer: 5
+  m_Name: Text (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &410234697
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22401530, guid: 4911c79527e48854e95bbb12ca421335,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410234696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5495671, y: 0.5495671, z: 0.5495671}
+  m_Children: []
+  m_Father: {fileID: 1312756124}
+  m_RootOrder: 3
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -243}
+  m_SizeDelta: {x: 2039.69, y: 82.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &410234698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11489830, guid: 4911c79527e48854e95bbb12ca421335,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410234696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b814ac243efb9d04f93027a96c3c7b70, type: 3}
+    m_FontSize: 45
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Press "R" to restart level
+--- !u!222 &410234699
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22230202, guid: 4911c79527e48854e95bbb12ca421335,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410234696}
 --- !u!1 &410760199
 GameObject:
   m_ObjectHideFlags: 0
@@ -8811,7 +8887,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 440618, guid: 3a7a53c60ba261244a35d4bdcecead57, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.904
+      value: 4.42
       objectReference: {fileID: 0}
     - target: {fileID: 440618, guid: 3a7a53c60ba261244a35d4bdcecead57, type: 2}
       propertyPath: m_LocalPosition.y
@@ -22378,6 +22454,68 @@ PolygonCollider2D:
       - {x: 0.45, y: -0.5}
       - {x: -0.45, y: -0.5}
       - {x: -0.5, y: -0.45}
+--- !u!1001 &1149476654
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.401
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.2960825
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467076, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 179608, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_Name
+      value: Hay Body (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185982, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_Offset.y
+      value: 0.038499452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185982, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_Size.y
+      value: 1.046999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185982, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_Offset.x
+      value: -0.04826355
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185982, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+      propertyPath: m_Size.x
+      value: 0.9362488
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9805d1a7bba1a6448b5237a3fcb3cea1, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1153681381
 GameObject:
   m_ObjectHideFlags: 0
@@ -24978,15 +25116,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11457652, guid: 4911c79527e48854e95bbb12ca421335, type: 2}
       propertyPath: m_Text
-      value: each animal has its own brain functions
+      value: each animal has its own habits
       objectReference: {fileID: 0}
     - target: {fileID: 11489830, guid: 4911c79527e48854e95bbb12ca421335, type: 2}
       propertyPath: m_Text
-      value: switch their brains to switch their behaviors
+      value: switch their brains to switch their habits
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4911c79527e48854e95bbb12ca421335, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &1312756124 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 22409620, guid: 4911c79527e48854e95bbb12ca421335,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312756123}
 --- !u!1 &1318298221
 GameObject:
   m_ObjectHideFlags: 0
