@@ -12,11 +12,11 @@ public class AlienAbduction : MonoBehaviour {
 	void FixedUpdate () {
 		
 		var scale = gameObject.transform.localScale;
-		scale.x *= .95f;
-		scale.y *= .95f;
+		scale.x *= .99f;
+		scale.y *= .99f;
 		gameObject.transform.Rotate (0, 0, 4f / (scale.x+.1f)); // todo fix rotation center
 		gameObject.transform.localScale = scale;
-		gameObject.transform.position += new Vector3 (0, .1f, 0);
+		gameObject.transform.position += new Vector3 (0, .03f, 0);
 
 		if (scale.x < .1) {
 			gameObject.SetActive (false);

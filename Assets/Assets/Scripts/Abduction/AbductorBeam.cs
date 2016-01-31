@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class AbductorBeam : MonoBehaviour {
 	public ScoreKeeper scoreboardConnected;
 	public float nextLevelDelay = 1;
+	public GameObject soundPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,8 @@ public class AbductorBeam : MonoBehaviour {
 			obody.gameObject.AddComponent<AlienAbduction> ();
             obody.animator.SetBool("jumping", true);
 			obody.enabled = false;
+	        if (soundPrefab != null)
+		        Instantiate(soundPrefab);
 			scoreboardConnected.numLeftToAbduct -= 1;
 			// Advance level if cleared.
 			if (scoreboardConnected.numLeftToAbduct == 0) {
