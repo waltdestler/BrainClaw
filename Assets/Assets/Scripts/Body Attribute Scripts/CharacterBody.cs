@@ -7,6 +7,7 @@ public class CharacterBody : MonoBehaviour {
 	public float jumpHeight = 1f;
 	public float jumpTime = 1f;
 	public float fallSpeed = 0f;
+	public float jumpFallSpeed = -6.0f;
 
 	public enum Direction {LEFT, RIGHT, UP, DOWN}
 	Direction sideFacing = Direction.LEFT;
@@ -92,7 +93,7 @@ public class CharacterBody : MonoBehaviour {
         isJumping = false;
 
         float currentHeight = transform.position.y;
-        float jumpFallSpeed = -6.0f;
+        
 
         fallSpeed = jumpFallSpeed;
 
