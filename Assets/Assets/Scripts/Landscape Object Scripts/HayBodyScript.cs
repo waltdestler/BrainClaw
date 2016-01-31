@@ -4,6 +4,7 @@ using System.Collections;
 public class HayBodyScript : MonoBehaviour {
 
 	public ParticleSystem particles;
+	public AudioSource sound;
 
 	public GameObject spriteBody;
 
@@ -40,10 +41,16 @@ public class HayBodyScript : MonoBehaviour {
 
 			if(!particles.isPlaying)
 				particles.Play ();
+
+			if (sound != null && !sound.isPlaying)
+				sound.Play();
 		} 
 		else 
 		{
 			particles.Stop ();
+
+			if(sound != null && sound.isPlaying)
+				sound.Stop();
 		}
 
 		//Restart variable
