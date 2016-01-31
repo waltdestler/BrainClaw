@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class ScoreKeeper : MonoBehaviour {
-	public int numAbducted = 0;
+	public int numLeftToAbduct = 3;
     public bool showText = true;
     public Rect textArea = new Rect(0,0,Screen.width, Screen.height);
 
@@ -13,7 +13,7 @@ public class ScoreKeeper : MonoBehaviour {
 	}
 		
     void OnGUI() {
-		var textDisplay = "Abducted: " + numAbducted;
+		var textDisplay = "Abduction Quota: " + numLeftToAbduct;
         GUI.Label(textArea,textDisplay);
     }
 	
