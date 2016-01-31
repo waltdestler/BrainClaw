@@ -5097,6 +5097,18 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11495054, guid: e08bdb06751084c4ebe8e1f7b02cdf86, type: 2}
+      propertyPath: textColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495054, guid: e08bdb06751084c4ebe8e1f7b02cdf86, type: 2}
+      propertyPath: textColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11495054, guid: e08bdb06751084c4ebe8e1f7b02cdf86, type: 2}
+      propertyPath: textColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e08bdb06751084c4ebe8e1f7b02cdf86, type: 2}
   m_IsPrefabParent: 0
