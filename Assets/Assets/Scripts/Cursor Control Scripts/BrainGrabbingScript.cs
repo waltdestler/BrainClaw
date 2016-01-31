@@ -8,10 +8,16 @@ public class BrainGrabbingScript : MonoBehaviour {
 
 	static int cursorClickableLayer = (1 << LayerMask.NameToLayer("CursorClickable"));
 
-	BrainBehavior tempBrain = null;
+	public BrainBehavior tempBrain = null;
 
 	public SpriteRenderer cursorBrainRender;
 	public GameObject grabSoundPrefab;
+	public SpriteRenderer grabbyRender;
+
+	public Sprite clawOpen;
+	public Sprite clawClosed;
+
+	public ParticleSystem ps;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +35,7 @@ public class BrainGrabbingScript : MonoBehaviour {
 		//If there's a brain switch with current one
 
 		if (Input.GetMouseButtonDown (0)) {
+			
 
 			//raycast to see if it hits anything
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -36,10 +43,10 @@ public class BrainGrabbingScript : MonoBehaviour {
 			RaycastHit2D hitInfo = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity, cursorClickableLayer);
 
 			if (hitInfo.collider) {
-				Debug.Log ("hitinfo body name: " + hitInfo.collider.transform.ToString());
+				Debug.Log ("hitinfo body name: " + hitInfo.collider.transform.ToString ());
 
 				//Find the body
-				CharacterBody body = hitInfo.collider.GetComponent<CharacterBody>();
+				CharacterBody body = hitInfo.collider.GetComponent<CharacterBody> ();
 
 
 				BrainBehavior backupTempBrain = null;
@@ -71,12 +78,27 @@ public class BrainGrabbingScript : MonoBehaviour {
 					cursorBrainRender.color = tempBrain.brainColor;
 				}
 
-				if (playSound && grabSoundPrefab != null)
-				{
-					Instantiate(grabSoundPrefab);
+				if (playSound && grabSoundPrefab != null) {
+					Instantiate (grabSoundPrefab);
 				}
 
 			}
+		}
+
+		//Turn particle system on/off
+		if (tempBrain) {
+			ps.gameObject.SetActive (true);
+
+		} else {
+			if (ps.isPlaying) {
+				ps.gameObject.SetActive (false);
+			}
+		}
+
+		if (Input.GetMouseButton (0)) {
+			grabbyRender.sprite = clawClosed;
+		} else {
+			grabbyRender.sprite = clawOpen;
 		}
 
 
