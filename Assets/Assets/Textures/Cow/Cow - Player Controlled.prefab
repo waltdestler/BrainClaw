@@ -331,9 +331,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0044932887, y: -0.79843926}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.08459761, y: 0.18153663}
 --- !u!61 &6104338
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -345,9 +345,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.14538014, y: 0.46037054}
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.16}
+  m_Size: {x: 1.3682964, y: 0.072772026}
 --- !u!61 &6117302
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -359,9 +359,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.011989777, y: 1.034569}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.1026293, y: 0.18043952}
 --- !u!61 &6121610
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -373,9 +373,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.035790615, y: 1.1102759}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.2490401, y: 0.19606847}
 --- !u!61 &6156074
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -387,9 +387,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: -0.01453799, y: -0.4224639}
   serializedVersion: 2
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.8238207, y: 1.1083355}
 --- !u!61 &6157368
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -401,9 +401,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0019088206, y: -0.68221825}
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.35225117, y: 0.16000013}
 --- !u!95 &9521900
 Animator:
   serializedVersion: 3
@@ -413,7 +413,7 @@ Animator:
   m_GameObject: {fileID: 146854}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b8608652d8f70a14eac171965adadc53, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8c392954dab528c439d04d2262fd2d57, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b09f57f75747346bfe0613d0241c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 0.5
   jumpHeight: 1
   jumpTime: 1
   fallSpeed: 1
@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 11429212}
-  brainColor: {r: 0.8392157, g: 0.73333335, b: 0.52156866, a: 1}
+  brainColor: {r: 0.8352941, g: 0.8392157, b: 0.52156866, a: 1}
 --- !u!114 &11474276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,7 +596,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a3d89bc430fef04b9a2f7a434e50a48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e614dc0bca25fd449b26df867f4c3dbe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -656,8 +656,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: ed2f079766959a1499af39a61cab9df8, type: 3}
-  m_Color: {r: 0.8392157, g: 0.73333335, b: 0.52156866, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bddf6bc935a76094c87bb3e0ed58e06e, type: 3}
+  m_Color: {r: 0.8352941, g: 0.8392157, b: 0.52156866, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!212 &21268262

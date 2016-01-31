@@ -11,8 +11,13 @@ public class BrainSpriteController : MonoBehaviour
 		if (Body != null && BrainSprite != null)
 		{
 			BrainSprite.enabled = Body.brainBehavior != null;
-			if (Body.brainBehavior != null)
+			if (Body.brainBehavior != null) {
 				BrainSprite.color = Body.brainBehavior.brainColor;
+				GetComponent<SpriteRenderer> ().enabled = true;
+			}
+			else {
+				GetComponent<SpriteRenderer> ().enabled = false;
+			}
 		}
 	}
 }
