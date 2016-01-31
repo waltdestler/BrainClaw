@@ -437,6 +437,7 @@ MonoBehaviour:
   brainBehavior: {fileID: 11402004}
   collisionManager: {fileID: 11413576}
   animator: {fileID: 9521900}
+  jumpSoundPrefab: {fileID: 182034, guid: f7827d759d3f748458056d3ceb8e547a, type: 2}
 --- !u!114 &11429712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -667,7 +668,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: jumpSoundPrefab
+      value: 
+      objectReference: {fileID: 182034, guid: f7827d759d3f748458056d3ceb8e547a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 108498}

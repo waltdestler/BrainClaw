@@ -187,6 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec2209c921834ca982c0c4332384d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreboardConnected: {fileID: 0}
+  nextLevelDelay: 1
 --- !u!60 &660327614
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -439,6 +441,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.7543352
       objectReference: {fileID: 0}
+    - target: {fileID: 11429212, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
+      propertyPath: jumpSoundPrefab
+      value: 
+      objectReference: {fileID: 182034, guid: f7827d759d3f748458056d3ceb8e547a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96e3d1777f411ba4f83b2e14ddd60be2, type: 2}
   m_IsPrefabParent: 0
