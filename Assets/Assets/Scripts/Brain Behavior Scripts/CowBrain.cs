@@ -11,7 +11,7 @@ public class CowBrain : BrainBehavior {
 
 	public float raycastDistance = 10f;
 
-	float stopDistance = 1f;
+	float stopDistance = 1.5f;
 
 	// ManualUpdate is called once per frame by CharacterBody
 	override public void ManualUpdate () {
@@ -24,6 +24,8 @@ public class CowBrain : BrainBehavior {
 
 		//Check if we are close enough already. If not, move towards the direction
 		if (Mathf.Abs(closestGrass.position.x - body.transform.position.x) > stopDistance) {
+
+			Debug.Log (Mathf.Abs(closestGrass.position.x - body.transform.position.x));
 
 			if (closestGrass.position.x - body.transform.position.x > 0)
 				body.MoveRight ();
