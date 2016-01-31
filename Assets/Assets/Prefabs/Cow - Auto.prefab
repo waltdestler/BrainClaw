@@ -402,7 +402,6 @@ MonoBehaviour:
   brainColor: {r: 0.65476674, g: 1, b: 0.45588237, a: 1}
   jumpInterval: 3
   raycastDistance: 20
-  stopDistance: 0.3
 --- !u!114 &11424048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -432,6 +431,7 @@ MonoBehaviour:
   brainBehavior: {fileID: 11423322}
   collisionManager: {fileID: 11455058}
   animator: {fileID: 9537756}
+  jumpSoundPrefab: {fileID: 131004, guid: c66cdfb17c8d20143ad62126a98bf31c, type: 2}
 --- !u!114 &11442600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -668,7 +668,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: jumpSoundPrefab
+      value: 
+      objectReference: {fileID: 131004, guid: c66cdfb17c8d20143ad62126a98bf31c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141774}

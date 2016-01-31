@@ -18,6 +18,7 @@ public class CharacterBody : MonoBehaviour {
 	public CollisionManager collisionManager;
 
 	public Animator animator;
+	public GameObject jumpSoundPrefab;
 
 	// Use this for initialization
 	void Start () 
@@ -94,6 +95,9 @@ public class CharacterBody : MonoBehaviour {
         float jumpFallSpeed = -6.0f;
 
         fallSpeed = jumpFallSpeed;
+
+		if (jumpSoundPrefab != null)
+			Instantiate(jumpSoundPrefab);
 	}
 
     public void Fall(bool botColliding)

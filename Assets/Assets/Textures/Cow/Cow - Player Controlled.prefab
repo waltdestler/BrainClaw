@@ -479,6 +479,7 @@ MonoBehaviour:
   brainBehavior: {fileID: 11461462}
   collisionManager: {fileID: 11413576}
   animator: {fileID: 9521900}
+  jumpSoundPrefab: {fileID: 131004, guid: c66cdfb17c8d20143ad62126a98bf31c, type: 2}
 --- !u!114 &11429712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -490,7 +491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed31044c19f2c442bebfc639f1fd4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColliding: 0
 --- !u!114 &11461462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,7 +515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed31044c19f2c442bebfc639f1fd4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColliding: 0
 --- !u!114 &11483838
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -527,7 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed31044c19f2c442bebfc639f1fd4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColliding: 0
 --- !u!114 &11489614
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -539,7 +537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed31044c19f2c442bebfc639f1fd4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isColliding: 0
 --- !u!212 &21211850
 SpriteRenderer:
   m_ObjectHideFlags: 1
