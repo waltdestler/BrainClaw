@@ -4,6 +4,7 @@ using System.Collections;
 public class toggleSwitch : MonoBehaviour {
 
 	public GameObject doorConnected;
+	public Vector3 openTranslate;
 	// Use this for initialization
 	void Start () {
 	
@@ -19,8 +20,10 @@ public class toggleSwitch : MonoBehaviour {
             scale.x *= -1;
             gameObject.transform.localScale = scale;
             // Open lift/open door... For now, just hide and show.
-            doorConnected.SetActive(!doorConnected.activeSelf);
-        }
+//            doorConnected.SetActive(!doorConnected.activeSelf);
+			float direction = -Mathf.Sign(scale.x);
+			doorConnected.transform.Translate(openTranslate*direction);
+		}
 	}
 
 	// Update is called once per frame
