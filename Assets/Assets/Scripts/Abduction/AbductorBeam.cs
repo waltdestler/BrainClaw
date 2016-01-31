@@ -16,7 +16,7 @@ public class AbductorBeam : MonoBehaviour {
 
         if (obody) {
 			obody.gameObject.AddComponent<AlienAbduction> ();
-			obody.animator.speed = 0;
+            obody.animator.SetBool("jumping", true);
 			obody.enabled = false;
 			scoreboardConnected.numLeftToAbduct -= 1;
 			// Advance level if cleared.
