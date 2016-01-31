@@ -170,7 +170,7 @@ GameObject:
   - 60: {fileID: 660327614}
   - 114: {fileID: 660327613}
   - 114: {fileID: 660327617}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f574b9230ec49a188a7f4e740b9288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numAbducted: 0
+  numLeftToAbduct: 3
   showText: 1
   textArea:
     serializedVersion: 2

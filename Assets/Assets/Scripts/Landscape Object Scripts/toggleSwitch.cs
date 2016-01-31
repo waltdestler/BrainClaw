@@ -10,14 +10,17 @@ public class toggleSwitch : MonoBehaviour {
 	}
 	
     void OnTriggerEnter2D (Collider2D player) {
-		if (player.tag == "character") {
-			// Flip object asset along x-axis. 
-			var scale = gameObject.transform.localScale;
-			scale.x *= -1;
-			gameObject.transform.localScale = scale;
-			// Open lift/open door... For now, just hide and show.
-			doorConnected.SetActive (!doorConnected.activeSelf);
-		}
+        var obody = player.gameObject.GetComponent<CharacterBody>();
+
+        if (obody)
+        {
+            // Flip object asset along x-axis. 
+            var scale = gameObject.transform.localScale;
+            scale.x *= -1;
+            gameObject.transform.localScale = scale;
+            // Open lift/open door... For now, just hide and show.
+            doorConnected.SetActive(!doorConnected.activeSelf);
+        }
 	}
 
 	// Update is called once per frame
