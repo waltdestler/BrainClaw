@@ -59,6 +59,8 @@ public class CharacterBody : MonoBehaviour {
 		{
 			sideFacing = Direction.LEFT;
 
+			Debug.Log ("Moving Left");
+
 			//GetComponent<Rigidbody2D> ().MovePosition (transform.position -moveSpeed * Time.deltaTime * transform.right );
 			transform.Translate (-moveSpeed * Time.deltaTime * transform.right);
 
@@ -76,6 +78,8 @@ public class CharacterBody : MonoBehaviour {
 			!collisionManager.RightIsColliding()) 
 		{
 			sideFacing = Direction.RIGHT;
+
+			Debug.Log ("Moving Right");
 
 			transform.Translate (moveSpeed * Time.deltaTime * transform.right);
 

@@ -25,7 +25,7 @@ public class CowBrain : BrainBehavior {
 		//Check if we are close enough already. If not, move towards the direction
 		if (Vector2.Distance (closestGrass.position, body.transform.position) > stopDistance) {
 
-			if (closestGrass.position.x - transform.position.x > 0)
+			if (closestGrass.position.x - body.transform.position.x > 0)
 				body.MoveRight ();
 			else
 				body.MoveLeft ();
@@ -45,6 +45,9 @@ public class CowBrain : BrainBehavior {
 
 			//if both directions hit, find the closest
 			if (leftHitInfo.collider != null) {
+
+				Debug.Log ("Distance to left: " + leftHitInfo.distance);
+				Debug.Log ("Distance to right: " + rightHitInfo.distance);
 
 				if (leftHitInfo.distance < rightHitInfo.distance) {
 					return leftHitInfo.collider.transform;
