@@ -30,7 +30,7 @@ public class CharacterBody : MonoBehaviour {
 		if(animator)
 			animator.SetFloat("walk_speed", 0);
 
-		if (brainBehavior != null) 
+		if (brainBehavior != null && brainBehavior.enabled) 
 		{
 			brainBehavior.ManualUpdate ();
 		}

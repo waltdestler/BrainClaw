@@ -16,8 +16,6 @@ public class CowBrain : BrainBehavior {
 	// ManualUpdate is called once per frame by CharacterBody
 	override public void ManualUpdate () {
 
-		Debug.Log (LayerMask.LayerToName(grassOnlyLayer));
-
 		//Shoot a raycast to either side and find closest grass
 		Transform closestGrass = FindClosestGrass();
 
