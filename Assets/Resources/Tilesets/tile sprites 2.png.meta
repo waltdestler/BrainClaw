@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 74eefead1477b4617be086fce9844eeb
-timeCreated: 1454211791
+guid: 0fda0b4296a514f9b94e8070ed5375fc
+timeCreated: 1454272720
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,9 @@ TextureImporter:
     21300016: tile sprites_8
     21300018: tile sprites_9
     21300020: tile sprites_10
+    21300022: tile sprites_11
+    21300024: tile sprites_12
+    21300026: tile sprites_13
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -215,6 +218,51 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: tile sprites_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: tile sprites_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 32}
+        - {x: -32, y: -32}
+        - {x: 32, y: -32}
+        - {x: 32, y: 32}
+    - name: tile sprites_13
+      rect:
+        serializedVersion: 2
+        x: 832
         y: 0
         width: 64
         height: 64
