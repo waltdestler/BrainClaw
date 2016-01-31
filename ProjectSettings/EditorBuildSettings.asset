@@ -15,3 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Albert Levels/Level 3 - first kangaroo level.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Albert Levels/Level 4.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Jimmy Levels/FrictionlessRectangularCow.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Jimmy Levels/LeftRightBrain.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Jimmy Levels/TowerRoo.unity
