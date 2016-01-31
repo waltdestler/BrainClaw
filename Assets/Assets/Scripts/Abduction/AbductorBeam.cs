@@ -36,7 +36,7 @@ public class AbductorBeam : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(nextLevelDelay);
 		if (Application.loadedLevel != Application.levelCount - 1) {
-			Application.LoadLevel (Application.loadedLevel + 1);
+			Application.LoadLevel ((Application.loadedLevel + 1)%Application.levelCount);
 		}
 	}
 	
