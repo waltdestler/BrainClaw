@@ -26,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.01, y: -1.81, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 8.88, y: -0.44, z: 0}
+  m_LocalScale: {x: 1.3936597, y: 1.3936592, z: 1.3936592}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -81,7 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorConnected: {fileID: 0}
-  openTranslate: {x: 0, y: 0, z: 0}
+  openTranslate: {x: 0, y: 2, z: 0}
+  switchSoundPrefab: {fileID: 192592, guid: 30afb738c3c903b49b8d8a05ecaecec7, type: 2}
 --- !u!212 &21298166
 SpriteRenderer:
   m_ObjectHideFlags: 1

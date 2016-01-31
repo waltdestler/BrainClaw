@@ -5,6 +5,8 @@ public class toggleSwitch : MonoBehaviour {
 
 	public GameObject doorConnected;
 	public Vector3 openTranslate;
+	public GameObject switchSoundPrefab;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -23,7 +25,10 @@ public class toggleSwitch : MonoBehaviour {
 //            doorConnected.SetActive(!doorConnected.activeSelf);
 			float direction = -Mathf.Sign(scale.x);
 			doorConnected.transform.Translate(openTranslate*direction);
-		}
+
+	        if (switchSoundPrefab != null)
+		        Instantiate(switchSoundPrefab);
+        }
 	}
 
 	// Update is called once per frame
