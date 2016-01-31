@@ -11,6 +11,7 @@ public class BrainGrabbingScript : MonoBehaviour {
 	BrainBehavior tempBrain = null;
 
 	public SpriteRenderer cursorBrainRender;
+	public GameObject grabSoundPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -43,11 +44,14 @@ public class BrainGrabbingScript : MonoBehaviour {
 
 				BrainBehavior backupTempBrain = null;
 
+				bool playSound = false;
+
 				//if the body has a brain, always take the brain
 				if (body.brainBehavior) {
 					body.brainBehavior.enabled = false;
 					backupTempBrain = body.brainBehavior;
 					body.brainBehavior = null;
+					playSound = true;
 				}
 
 				//if we have a temp brain, always insert the brain
@@ -57,6 +61,7 @@ public class BrainGrabbingScript : MonoBehaviour {
 					body.brainBehavior.enabled = true;
 					body.brainBehavior.body = body;
 					cursorBrainRender.enabled = false;
+					playSound = true;
 				}
 
 				//If we have a backup that we grabbed early, insert into claw
@@ -66,7 +71,10 @@ public class BrainGrabbingScript : MonoBehaviour {
 					cursorBrainRender.color = tempBrain.brainColor;
 				}
 
-
+				if (playSound && grabSoundPrefab != null)
+				{
+					Instantiate(grabSoundPrefab);
+				}
 
 			}
 		}
