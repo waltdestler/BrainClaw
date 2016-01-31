@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Levels/Albert Levels/Starting Screen.unity
+  - enabled: 1
     path: Assets/Scenes/Levels/Albert Levels/_Tutorial 1.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Albert Levels/_Tutorial 2.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Albert Levels/Level 3 - first kangaroo level.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Albert Levels/Level 4.unity
