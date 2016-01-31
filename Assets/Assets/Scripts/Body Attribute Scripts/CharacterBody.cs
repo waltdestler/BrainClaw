@@ -42,13 +42,13 @@ public class CharacterBody : MonoBehaviour {
 			{
 				Fall ();
 			}
-
-			animator.SetBool("jumping", true);
+            if (animator)
+    			animator.SetBool("jumping", true);
 		}
 		else
 		{
-
-			animator.SetBool("jumping", false);
+            if (animator)
+    			animator.SetBool("jumping", false);
 		}
 	}
 
