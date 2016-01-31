@@ -6,7 +6,8 @@ public class CharacterBody : MonoBehaviour {
 	public float moveSpeed = 1f;
 	public float jumpHeight = 1f;
 	public float jumpTime = 1f;
-	public float fallSpeed = 1f;
+	public float fallSpeed = 0f;
+
 	public enum Direction {LEFT, RIGHT, UP, DOWN}
 	Direction sideFacing = Direction.LEFT;
 
@@ -21,7 +22,7 @@ public class CharacterBody : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		
+        fallSpeed = 0;
 	}
 
 
@@ -35,21 +36,11 @@ public class CharacterBody : MonoBehaviour {
 			brainBehavior.ManualUpdate ();
 		}
 
-		if (!collisionManager.BotIsColliding()) 
-		{
-			// Check if we are jumping
-			if (!isJumping) 
-			{
-				Fall ();
-			}
-            if (animator)
-    			animator.SetBool("jumping", true);
-		}
-		else
-		{
-            if (animator)
-    			animator.SetBool("jumping", false);
-		}
+        bool botColliding = collisionManager.BotIsColliding();
+        Fall (botColliding);
+        if (animator)
+            animator.SetBool("jumping", !botColliding);
+		
 	}
 
 	public virtual void MoveLeft()
@@ -59,7 +50,7 @@ public class CharacterBody : MonoBehaviour {
 		{
 			sideFacing = Direction.LEFT;
 
-			Debug.Log ("Moving Left");
+//			Debug.Log ("Moving Left");
 
 			//GetComponent<Rigidbody2D> ().MovePosition (transform.position -moveSpeed * Time.deltaTime * transform.right );
 			transform.Translate (-moveSpeed * Time.deltaTime * transform.right);
@@ -91,40 +82,45 @@ public class CharacterBody : MonoBehaviour {
 		}
 	}
 
-	public virtual void Jump()
+	public void Jump()
 	{
-		//Check if on ground
-		StartCoroutine(JumpingCoroutine());
+        if (isJumping || !collisionManager.BotIsColliding()) {
+            return;
+        }
+
+        isJumping = false;
+
+        float currentHeight = transform.position.y;
+        float jumpFallSpeed = -6.0f;
+
+        fallSpeed = jumpFallSpeed;
 	}
 
-	public virtual void Fall()
+    public void Fall(bool botColliding)
 	{
-		transform.Translate (-fallSpeed * Time.deltaTime * transform.up);
-	}
+        float maxFallSpeed = 10f;
+        float fallSpeedAccel = 10f;
+        float changeFallSpeed = fallSpeedAccel * Time.deltaTime;
+        if (fallSpeed + changeFallSpeed > maxFallSpeed) {
+            changeFallSpeed = maxFallSpeed - fallSpeed;
+        }
 
-	IEnumerator JumpingCoroutine()
-	{
-		if (isJumping || !collisionManager.BotIsColliding()) {
-			yield break;
-		}
+        float deltaY = -(fallSpeed + .5f * changeFallSpeed);
+        float collidingFactor = 1;
+        if (deltaY > 0 && collisionManager.TopIsColliding())
+            collidingFactor = 0;
+        if (deltaY < 0 && botColliding)
+            collidingFactor = 0;
+        
+        deltaY *= collidingFactor;
 
-		isJumping = true;
+        float safeRange = .2f;
+        float stepY = Mathf.Clamp(deltaY * Time.deltaTime, -safeRange, safeRange);
+        GetComponent<Rigidbody2D> ().MovePosition (transform.position + stepY * transform.up );
 
-		float currentHeight = transform.position.y;
+        fallSpeed += changeFallSpeed;
+        fallSpeed *= collidingFactor;
 
-		while( transform.position.y < currentHeight+jumpHeight)
-		{
-
-			if (collisionManager.TopIsColliding ())
-				break;	
-
-			transform.Translate (jumpHeight / jumpTime * Time.deltaTime * transform.up);
-			yield return null;
-		}
-
-
-		isJumping = false;
-			
 	}
 		
 	public bool CheckDirectionCollision(Direction d)
