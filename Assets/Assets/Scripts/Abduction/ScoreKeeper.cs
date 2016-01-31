@@ -5,6 +5,7 @@ using System.Collections;
 public class ScoreKeeper : MonoBehaviour {
 	public int numLeftToAbduct = 3;
     public bool showText = true;
+	public Color textColor = Color.cyan;
 	private Rect textArea;
 	private GUIStyle style = new GUIStyle();
 
@@ -12,7 +13,7 @@ public class ScoreKeeper : MonoBehaviour {
 	void Start () {
 		textArea = new Rect(0,0, Screen.width, Screen.height);
 		style.fontSize = 20;
-		style.normal.textColor = Color.cyan;
+		style.normal.textColor = textColor;
 		style.font = (Font)Resources.Load("slkscr");
 	}
 
