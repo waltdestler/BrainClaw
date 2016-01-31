@@ -19,9 +19,12 @@ public class AbductorBeam : MonoBehaviour {
 			obody.animator.speed = 0;
 			obody.enabled = false;
 			scoreboardConnected.numLeftToAbduct -= 1;
+			// Advance level if cleared.
 			if (scoreboardConnected.numLeftToAbduct == 0) {
-				// TODO: move on to next level
 				Debug.Log("Quota Fulfilled!!");
+				if (Application.loadedLevel != Application.levelCount - 1) {
+					Application.LoadLevel (Application.loadedLevel + 1);
+				}
 			}
 		}
     }
