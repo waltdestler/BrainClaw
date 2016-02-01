@@ -661,6 +661,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 32174250}
   - 212: {fileID: 32174251}
+  - 60: {fileID: 32174252}
   m_Layer: 0
   m_Name: Tile|19.5|-4.5
   m_TagString: Untagged
@@ -706,10 +707,32 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 74eefead1477b4617be086fce9844eeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1516c5653ed1e4f4dade8135f06c2542, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!60 &32174252
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32174249}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.49}
+      - {x: -0.45, y: 0.5}
+      - {x: 0.45, y: 0.5}
+      - {x: 0.5, y: 0.49}
+      - {x: 0.5, y: -0.45}
+      - {x: 0.45, y: -0.5}
+      - {x: -0.45, y: -0.5}
+      - {x: -0.5, y: -0.45}
 --- !u!1 &39134579
 GameObject:
   m_ObjectHideFlags: 0
@@ -41113,6 +41136,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2119515295}
   - 212: {fileID: 2119515296}
+  - 60: {fileID: 2119515297}
   m_Layer: 0
   m_Name: Tile|18.5|-4.5
   m_TagString: Untagged
@@ -41158,10 +41182,32 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 74eefead1477b4617be086fce9844eeb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1516c5653ed1e4f4dade8135f06c2542, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!60 &2119515297
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119515294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.5, y: 0.49}
+      - {x: -0.45, y: 0.5}
+      - {x: 0.45, y: 0.5}
+      - {x: 0.5, y: 0.49}
+      - {x: 0.5, y: -0.45}
+      - {x: 0.45, y: -0.5}
+      - {x: -0.45, y: -0.5}
+      - {x: -0.5, y: -0.45}
 --- !u!1 &2126036636
 GameObject:
   m_ObjectHideFlags: 0
