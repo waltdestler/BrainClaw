@@ -434,6 +434,7 @@ MonoBehaviour:
   jumpHeight: 1
   jumpTime: 1
   fallSpeed: 1
+  jumpFallSpeed: -6
   brainBehavior: {fileID: 11402004}
   collisionManager: {fileID: 11413576}
   animator: {fileID: 9521900}

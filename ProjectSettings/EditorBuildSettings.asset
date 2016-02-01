@@ -23,3 +23,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Jimmy Levels/TowerRoo.unity
   - enabled: 1
     path: Assets/Scenes/Levels/Kevin Levels/OutTheWindow.unity
+  - enabled: 1
+    path: Assets/Scenes/Levels/Albert Levels/Ending Screen.unity
